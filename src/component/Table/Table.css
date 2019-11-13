@@ -1,0 +1,13 @@
+.head-group{
+  background: #FABB00;
+  width: 100%;
+  max-height: 50px;
+  background: #FABB00;
+  display: flex;
+  font-size: 20px;
+}
+
+.head-group p {
+  padding: 10px;
+}
+

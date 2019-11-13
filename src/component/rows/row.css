@@ -1,0 +1,46 @@
+.row {
+  width: 100%;
+  max-height: 130px;
+  background: #2F4858;
+  display: flex;
+}
+.rowItem {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.row:nth-child(2n) {
+  background: rgb(104, 152, 182);
+ } 
+
+.row-item-text{
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 40px;
+  color: #FFFFFF;
+  max-height: 100px;
+  white-space: pre-line;
+}
+
+.train-icon{
+  margin-right: 10px;
+}
+
+.green{
+  background: green;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.red{
+  background: red;
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+}
+

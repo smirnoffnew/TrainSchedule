@@ -1,0 +1,21 @@
+.head-table {
+  width: 100%;
+  background: #FABB00;
+  display: inline-flex;
+}
+.head-logo  {
+  width: 394.43px;
+  height: 60px;
+  margin: 29px 1433.82px 29px 91.75px;
+}
+.head-time {
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 100px;
+  display: flex;
+  color: #1C2D4D;
+}

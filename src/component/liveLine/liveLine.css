@@ -1,0 +1,17 @@
+.live-line-wrapper {
+  width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+  background: #FF3838;
+  white-space: nowrap;
+}
+.live-line-wrapper .live-line {
+  font-family: Open Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 50px;
+  color: #FEFEFE;
+  
+}
+
