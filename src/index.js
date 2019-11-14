@@ -8,7 +8,7 @@ import './index.css';
 ReactDOM.render(
   <Router>
       <>
-        <Route exact path='/page1' component={App} />  
+        <Route exact path='/' component={App} />  
       </>
   </Router>,
   document.getElementById('root')

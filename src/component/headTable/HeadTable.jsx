@@ -10,9 +10,10 @@ export const HeadTable = () => {
   }
 
   useEffect(() => {
-    setInterval(() => {
+    let id = setInterval(() => {
       tick();
     }, 1000);
+    return () => clearInterval(id);
   });
 
   return (

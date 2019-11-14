@@ -3,16 +3,13 @@
   max-height: 130px;
   background: #2F4858;
   display: flex;
+  border-bottom: 2px solid #c3ccd2;
 }
 .rowItem {
   display: flex;
   align-items: center;
   padding: 10px;
 }
-
-.row:nth-child(2n) {
-  background: rgb(104, 152, 182);
- } 
 
 .row-item-text{
   font-family: Open Sans;
@@ -28,18 +25,19 @@
 
 .train-icon{
   margin-right: 10px;
+  height: 25px;
 }
 
 .green{
   background: green;
-  border-radius: 10px;
+  border-radius: 25px;
   padding: 10px;
   font-size: 20px;
 }
 
 .red{
   background: red;
-  border-radius: 10px;
+  border-radius: 25px;
   padding: 10px;
   font-size: 20px;
 }
