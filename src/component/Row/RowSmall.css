@@ -1,17 +1,19 @@
-.row {
+.rowSmall {
   width: 100%;
-  max-height: 130px;
+  max-height: 461px;
   background: #2F4858;
   display: flex;
+  flex-direction: column;
   border-bottom: 2px solid #c3ccd2;
 }
-.rowItem {
+.rowItemSmall {
   display: flex;
   align-items: center;
-  padding: 10px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.row-item-text{
+.row-item-textSmall{
   font-family: Open Sans;
   font-style: normal;
   font-weight: normal;
@@ -21,26 +23,29 @@
   color: #FFFFFF;
   max-height: 100px;
   white-space: pre-line;
+  padding: 10px;
 }
 
-.train-icon{
+.train-iconSmall{
   margin-right: 10px;
   height: 25px;
+  padding-left: 10px;
 }
 
-.green{
+.greenSmall{
   color: #FEFEFE !important;
   background: green;
   border-radius: 25px;
   padding: 10px;
   font-size: 20px;
+  margin-right: 10px;
 }
 
-.red{
+.redSmall{
   color: #FEFEFE !important;
   background: red;
   border-radius: 25px;
   padding: 10px;
   font-size: 20px;
+  margin-right: 10px;
 }
-

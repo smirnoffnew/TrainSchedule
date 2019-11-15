@@ -1,86 +1,33 @@
 import React, { Component } from 'react';
-import { HeadTable } from './headTable/HeadTable'
-import { LiveLine } from '../component/liveLine/LiveLine'
-import Table from './Table/Table';
-
-const rows = [
-  {
-    connectNumber: "ft 109",
-    destination: "Brno",
-    departureTime: "13:00",
-    departure: "Phaga",
-    platform: "3/4",
-    time: '40 min',
-    timeColor: 'red',
-
-    // places: 'zanato',
-    // placesColor: 'red'
-  },
-  {
-    connectNumber: "ft 109",
-    destination: "Brno",
-    departureTime: "13:00",
-    departure: "Phaga PhagaPhaga",
-    platform: "3/4",
-    time: '45 min',
-    timeColor: 'red',
-
-    // places: 'zanato',
-    // placesColor: 'red'
-  },
-  {
-    connectNumber: "ft 109",
-    destination: "Brno",
-    departureTime: "13:00",
-    departure: "Phaga",
-    platform: "3/4",
-    time: '1 hour 35 min',
-    timeColor: 'red',
-
-    // places: 'zanato',
-    // placesColor: 'green'
-  },
-  {
-    connectNumber: "ft 109",
-    destination: "Brno",
-    departureTime: "13:00",
-    departure: "Phaga",
-    platform: "3/4",
-
-    time: '0 min',
-    timeColor: 'green',
-
-    // places: 'zanato',
-    // placesColor: 'green'
-  },
-  {
-    connectNumber: "ft 109",
-    destination: "Brno",
-    departureTime: "13:00",
-    departure: "Phaga",
-    platform: "3/4",
-    time: '1 hour',
-    timeColor: 'red',
-
-    // places: 'zanato',
-    // placesColor: 'red'
-  },
-]
+import Select from './Select';
+// import MenuItem from './MenuItem';
+import { Redirect } from 'react-router-dom'
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: '/TableInside' };
+    this.options = [
+      "/TableInside",
+      "/TableInsideLiveLine",
+      "/TableOutside",
+      "/TableOutsideLiveLine",
+      "/TableSmallTwo",
+      "/TableSmallThree",
+    ];
+  }
+
+  setValue = (value) => {
+    this.setState({ value });
+  }
+
   render() {
     return (
       <>
-        <HeadTable />
-        <Table 
-          rows={rows}
-          collumns={6} // 7 or 6
-          theme='dark' // dark , light
-          even={true}
-        />
-        <LiveLine
-          text={'dfsjdf sdfkgj ghskdf ;jjd;s kdf dfksfgjjgsldk;gj dfgjdkl;gj lllllllllll;jk;jkl lkj; jh dndkfgfkjhgsgjhjsldgfj sdfgj kdjgsdf jsdfk '}
-        />
+        <Select options={this.options} setValue={this.setValue} />
+        <Redirect to={{
+          pathname: this.state.value
+        }} />
       </>
     );
   }

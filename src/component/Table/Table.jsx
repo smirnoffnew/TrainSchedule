@@ -91,6 +91,9 @@ class Table extends Component {
 
                   timeColor={item.timeColor}
                   time={item.time}
+
+                  placesColor={item.placesColor}
+                  places={item.places}
                 />
               })}
             </>
