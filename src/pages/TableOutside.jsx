@@ -11,7 +11,7 @@ const rows = [
     platform: "3/4",
     time: '40 min',
     timeColor: 'red',
-    places: 'zanato',
+    places: 'Obsazeno',
     placesColor: 'red'
   },
   {
@@ -22,7 +22,7 @@ const rows = [
     platform: "3/4",
     time: '45 min',
     timeColor: 'red',
-    places: 'zanato',
+    places: 'Obsazeno',
     placesColor: 'red'
   },
   {
@@ -56,7 +56,7 @@ const rows = [
     platform: "3/4",
     time: '1 hour',
     timeColor: 'red',
-    places: 'zanato',
+    places: 'Obsazeno',
     placesColor: 'red'
   },
 ]

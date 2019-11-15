@@ -13,7 +13,7 @@ const rows = [
     time: '40 min',
     timeColor: 'red',
 
-    // places: 'zanato',
+    // places: 'Obsazeno',
     // placesColor: 'red'
   },
   {
@@ -25,7 +25,7 @@ const rows = [
     time: '45 min',
     timeColor: 'red',
 
-    // places: 'zanato',
+    // places: 'Obsazeno',
     // placesColor: 'red'
   },
   {
@@ -37,7 +37,7 @@ const rows = [
     time: '1 hour 35 min',
     timeColor: 'red',
 
-    // places: 'zanato',
+    // places: 'Obsazeno',
     // placesColor: 'green'
   },
   {
@@ -50,7 +50,7 @@ const rows = [
     time: '0 min',
     timeColor: 'green',
 
-    // places: 'zanato',
+    // places: 'Obsazeno',
     // placesColor: 'green'
   },
   {
@@ -62,7 +62,7 @@ const rows = [
     time: '1 hour',
     timeColor: 'red',
 
-    // places: 'zanato',
+    // places: 'Obsazeno',
     // placesColor: 'red'
   },
 ]
