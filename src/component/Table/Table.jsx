@@ -83,17 +83,18 @@ class Table extends Component {
               {this.props.rows.map((item, index) => {
                 return <Row
                   key={index}
-                  connectNumber={item.connectNumber}
+                  connectNumber={item.number}
+
                   destination={item.destination}
                   departureTime={item.departureTime}
                   departure={item.departure}
                   platform={item.platform}
 
-                  timeColor={item.timeColor}
-                  time={item.time}
+                  timeColor={item.delay === 0 ? 'green': 'red' }
+                  time={`${item.delay}min`}
 
-                  placesColor={item.placesColor}
-                  places={item.places}
+                  placesColor={item.freeSeatsCount === 0 ? 'red': 'green'}
+                  places={item.freeSeatsCount === 0 ? 'Occupied': 'Free seats'}
                 />
               })}
             </>

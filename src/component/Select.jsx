@@ -8,8 +8,9 @@ export default class Select extends React.Component {
   }
 
   render() {
-    const options = this.props.options.map(elem => (
+    const options = this.props.options.map((elem, index) => (
       <option
+        key = {index}
         value={elem}
       >
         {elem}
