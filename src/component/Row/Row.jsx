@@ -5,7 +5,7 @@ import './Row.css';
 class Row extends Component {
   render() {
     const {
-      connectNumber, destination, departureTime, departure, platform, timeColor, time, places, placesColor
+      stationsTypes, connectNumber, destination, departureTime, departure, platform, timeColor, time, places, placesColor
     } = this.props
 
     return (

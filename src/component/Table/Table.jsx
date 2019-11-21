@@ -54,6 +54,7 @@ class Table extends Component {
               {this.props.rows.map((item, index) => {
                 return <Row
                   key={index}
+                  stationsTypes={item.stationsTypes}
                   connectNumber={item.connectNumber}
                   destination={item.destination}
                   departureTime={item.departureTime}
@@ -83,6 +84,7 @@ class Table extends Component {
               {this.props.rows.map((item, index) => {
                 return <Row
                   key={index}
+                  stationsTypes={item.stationsTypes}
                   connectNumber={item.number}
 
                   destination={item.destination}

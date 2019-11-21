@@ -130,18 +130,25 @@ class TableInside extends Component {
         return item2.id === firtsStation[0].stationId;
       });
 
+      const trowStations = item.connectionStations.slice(0,item.connectionStations.length-1);
+      let counter = 0;
+      setInterval(() => {
+        counter === trowStations.length-1 ? counter-- :  counter++
+      }, 60*1000*5);
+      const trowStation = stations.filter((item3)=>{
+        return item3.id === trowStations[counter].stationId;
+      })
       const normalRow = {};
       normalRow.number = item.number;
       normalRow.delay = item.delay;
       normalRow.freeSeatsCount = item.freeSeatsCount;
       normalRow.destination = name;
       normalRow.departureTime =  firtsStation[0].departure.substring(firtsStation[0].departure.indexOf('T')+1,firtsStation[0].departure.indexOf('T')+6);
-      normalRow.departure = null;
+      normalRow.departure = trowStation[0].fullname;
       normalRow.platform = firtsStation[0].platform;
-      normalRow.stationsTypes = startStation[0].stationsTypes[0]
+      normalRow.stationsTypes = startStation[0].stationsTypes[0];
       return normalRow;
     });
-    console.log('newRows',rows)
     return (
       <Fragment>
         <HeadTable />
