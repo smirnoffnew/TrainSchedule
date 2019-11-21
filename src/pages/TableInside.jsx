@@ -149,11 +149,14 @@ class TableInside extends Component {
       normalRow.stationsTypes = startStation[0].stationsTypes[0];
       return normalRow;
     });
+    const startPagination = 0;
+    const endPagination = 10;
+    const paginationRows = newRows.slice(startPagination,endPagination);
     return (
       <Fragment>
         <HeadTable />
         <Table 
-          rows={newRows}
+          rows={paginationRows}
           collumns={6} // 7 or 6
           theme='dark' // dark , light
           even={true}
