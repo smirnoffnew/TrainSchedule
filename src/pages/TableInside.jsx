@@ -139,7 +139,7 @@ class TableInside extends Component {
         return item3.id === trowStations[counter].stationId;
       })
       const normalRow = {};
-      normalRow.number = item.number;
+      normalRow.connectNumber = item.number;
       normalRow.delay = item.delay;
       normalRow.freeSeatsCount = item.freeSeatsCount;
       normalRow.destination = name;
