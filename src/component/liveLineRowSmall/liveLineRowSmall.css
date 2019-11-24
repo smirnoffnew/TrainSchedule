@@ -1,0 +1,15 @@
+.live-line-wrapper-row-small {
+  width: 100%;
+	position: absolute; 
+	left: 0;
+  /* bottom: -12px; */
+  white-space: nowrap;
+  font-size: 60px;
+  color: #d2d9de;
+  font-weight: 300;
+}
+.live-line-wrapper-row-small .live-line-row-small {
+  padding-right: 800px;
+  word-spacing: 50px;
+}
+

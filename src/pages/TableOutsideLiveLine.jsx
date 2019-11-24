@@ -2,78 +2,58 @@ import React, { Component, Fragment } from 'react';
 import { HeadTable } from '../component/headTable/HeadTable'
 import { LiveLine } from '../component/liveLine/LiveLine'
 import Table from '../component/Table/Table';
-
-const rows = [
-  {
-    connectNumber: "ft 109",
-    destination: "Brno",
-    departureTime: "13:00",
-    departure: "Phaga",
-    platform: "3/4",
-    time: '40 min',
-    timeColor: 'red',
-
-    places: 'Obsazeno',
-    placesColor: 'red'
-  },
-  {
-    connectNumber: "ft 109",
-    destination: "Brno",
-    departureTime: "13:00",
-    departure: "Phaga PhagaPhaga",
-    platform: "3/4",
-    time: '45 min',
-    timeColor: 'red',
-
-    places: 'Obsazeno',
-    placesColor: 'red'
-  },
-  {
-    connectNumber: "ft 109",
-    destination: "Brno",
-    departureTime: "13:00",
-    departure: "Phaga",
-    platform: "3/4",
-    time: '1 hour 35 min',
-    timeColor: 'red',
-
-    places: 'Volná místa',
-    placesColor: 'green'
-  },
-  {
-    connectNumber: "ft 109",
-    destination: "Brno",
-    departureTime: "13:00",
-    departure: "Phaga",
-    platform: "3/4",
-
-    time: '0 min',
-    timeColor: 'green',
-
-    places: 'Obsazeno',
-    placesColor: 'green'
-  },
-  {
-    connectNumber: "ft 109",
-    destination: "Brno",
-    departureTime: "13:00",
-    departure: "Phaga",
-    platform: "3/4",
-    time: '1 hour',
-    timeColor: 'red',
-
-    places: 'Obsazeno',
-    placesColor: 'red'
-  },
-]
+import { getRows } from '../functions';
 
 class TableOutsideLiveLine extends Component {
+  state = {
+    rows: [],
+    locations: [],
+    showLoader: true,
+  }
+
+  apiRequestLoop = () => {
+    const rowsUrlLoop = "https://dpl-qa-ybus-pubapi.sa.cz/restapi/routes/10204002/departures"
+    const locationsUrlLoop = "https://dpl-qa-ybus-pubapi.sa.cz/restapi/consts/locations"
+
+    fetch(rowsUrlLoop, { mode: 'cors' })
+      .then(response => response.json())
+      .then(rowsData =>
+        fetch(locationsUrlLoop, { mode: 'cors' })
+          .then(response => response.json())
+          .then(locationsData => {
+            this.setState({
+              rows: rowsData,
+              locations: locationsData,
+              showLoader: false,
+            });
+          })
+          .catch(error => {
+            console.log(error.message)
+          })
+      )
+      .catch(error => {
+        console.log(error.message)
+      })
+  }
+
+  tick = () => {
+    this.apiRequestLoop()
+  }
+
+  componentDidMount = () => {
+    this.apiRequestLoop();
+    setInterval(() => this.tick(), 1000 * 30)
+  }
+
   render() {
+    const { rows, locations, showLoader } = this.state;
+    
     return (
       <Fragment>
+        {showLoader && <div className="loader" />}
         <HeadTable />
-        <Table 
-          rows={rows}
+        <Table
+          rows={getRows(rows, locations, 10)}
           collumns={7} // 7 or 6
           theme='light' // dark , light
           even={true}

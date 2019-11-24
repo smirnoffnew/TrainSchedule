@@ -7,7 +7,7 @@ const LiveLine = ({ text }) => {
     <section className="live-line-wrapper" >
       <div style={{ margin:"10px 0px 10px 10px" }}>
         <Ticker
-            direction="toRight"
+            direction="toLeft"
             offset="50%"
             speed={5}
         >

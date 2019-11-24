@@ -1,11 +1,17 @@
 import React, { Component, Fragment } from 'react';
 import trainIcon from '../../assets/Vector.png';
 import './RowSmall.css';
+import LiveLineRowSmall from '../liveLineRowSmall/liveLineRowSmall';
 
 class RowSmall extends Component {
   render() {
     const {
-      connectNumber, destination, departureTime, departure, places, placesColor
+      connectNumber,
+      destination,
+      departureTime,
+      departure,
+      placesColor,
+      places,
     } = this.props
 
     return (
@@ -14,26 +20,28 @@ class RowSmall extends Component {
       >
         <Fragment>
           <div className="rowItemSmall" style={{ width: '100%' }}>
-            <div className="row-item-textSmall">{destination}</div>
-            <div className="row-item-textSmall">{departureTime}</div>
+            <div className="row-item-textSmall font-size-rem">{destination}</div>
+            <div className="row-item-textSmall font-size-rem">{departureTime}</div>
           </div>
 
           <div className="rowItemSmall" style={{ width: '100%' }}>
-            <div className="row-item-textSmall">{departure}</div>
+            <div className="row-item-textSmall">
+              <LiveLineRowSmall text={departure} />
+            </div>
           </div>
 
-          <div className="rowItemSmall" style={{ width: '100%' }}>
+          <div className="rowItemSmall" style={{ width: '100%', marginTop: 70 }}>
             <div style={{ display: 'inherit', alignItems: 'center' }}>
               <img src={trainIcon} alt="TrainLogo" className="train-iconSmall" />
-              <div className="row-item-textSmall">{connectNumber}</div>            
+              <div className="row-item-textSmall" >{connectNumber}</div>
             </div>
-            <div
-              className={
-                placesColor === 'red' ? "row-item-textSmall redSmall" : "row-item-textSmall greenSmall"
-              }
-            >
-              {places}
-            </div>
+          </div>
+
+          <div
+            className='places-small'
+            style={{ background: placesColor === 'red' ? "red" : "green" }}
+          >
+            {places}
           </div>
         </Fragment>
       </section>
