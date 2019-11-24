@@ -11,18 +11,15 @@ import App from '../component/App';
 const AppRouter = () => {
 
   return (
-    <>
-      <App />
-
-      <Switch>
-        <Route path="/TableInside" component={TableInside} />
-        <Route path="/TableInsideLiveLine" component={TableInsideLiveLine} />
-        <Route path="/TableOutside" component={TableOutside} />
-        <Route path="/TableOutsideLiveLine" component={TableOutsideLiveLine} />
-        <Route path="/TableSmallTwo" component={TableSmallTwo} />
-        <Route path="/TableSmallThree" component={TableSmallThree} />
-      </Switch>
-    </>
+    <Switch>
+      <Route exact path="/" component={App} />
+      <Route exact path="/TableInside" component={TableInside} />
+      <Route exact path="/TableInsideLiveLine" component={TableInsideLiveLine} />
+      <Route exact path="/TableOutside" component={TableOutside} />
+      <Route exact path="/TableOutsideLiveLine" component={TableOutsideLiveLine} />
+      <Route exact path="/TableSmallTwo" component={TableSmallTwo} />
+      <Route exact path="/TableSmallThree" component={TableSmallThree} />
+    </Switch>
   )
 };
 
