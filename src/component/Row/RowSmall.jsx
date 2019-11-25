@@ -33,7 +33,7 @@ class RowSmall extends Component {
           <div className="rowItemSmall" style={{ width: '100%', marginTop: 70 }}>
             <div style={{ display: 'inherit', alignItems: 'center' }}>
               <img src={trainIcon} alt="TrainLogo" className="train-iconSmall" />
-              <div className="row-item-textSmall" >{connectNumber}</div>
+              <div className="row-item-textSmall" style={{ paddingLeft: 7 }}>{connectNumber}</div>
             </div>
           </div>
 

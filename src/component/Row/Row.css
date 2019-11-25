@@ -39,3 +39,20 @@
   text-align: center;
 }
 
+.green{
+  color: #FEFEFE !important;
+  background: green;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.red{
+  color: #FEFEFE !important;
+  background: red;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+
