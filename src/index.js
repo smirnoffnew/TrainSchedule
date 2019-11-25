@@ -10,14 +10,10 @@ import './index.css';
 
 ReactDOM.render(
   <>
-  
-    <Router>
+    <Router  basename='/' >
       <AppRouter />
     </Router>
   </>,
-  // <Router>
-  // <AppRouter />,
-  // <Router />
   document.getElementById('root')
 );
 
