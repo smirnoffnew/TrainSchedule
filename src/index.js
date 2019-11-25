@@ -10,7 +10,7 @@ import './index.css';
 
 ReactDOM.render(
   <>
-    <Router  basename='/' >
+    <Router  basename={process.env.PUBLIC_URL} >
       <AppRouter />
     </Router>
   </>,
