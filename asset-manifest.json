@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/TrainSchedule/static/css/main.3c6c27ce.chunk.css",
-    "main.js": "/TrainSchedule/static/js/main.23080f3d.chunk.js",
-    "main.js.map": "/TrainSchedule/static/js/main.23080f3d.chunk.js.map",
-    "runtime-main.js": "/TrainSchedule/static/js/runtime-main.989b68e1.js",
-    "runtime-main.js.map": "/TrainSchedule/static/js/runtime-main.989b68e1.js.map",
-    "static/js/2.1089415c.chunk.js": "/TrainSchedule/static/js/2.1089415c.chunk.js",
-    "static/js/2.1089415c.chunk.js.map": "/TrainSchedule/static/js/2.1089415c.chunk.js.map",
-    "index.html": "/TrainSchedule/index.html",
-    "precache-manifest.ca11ba643163fa218ea0b634e125e4c4.js": "/TrainSchedule/precache-manifest.ca11ba643163fa218ea0b634e125e4c4.js",
-    "service-worker.js": "/TrainSchedule/service-worker.js",
-    "static/css/main.3c6c27ce.chunk.css.map": "/TrainSchedule/static/css/main.3c6c27ce.chunk.css.map"
+    "main.css": "https://smirnoffnew.github.io/TrainSchedule/static/css/main.3c6c27ce.chunk.css",
+    "main.js": "https://smirnoffnew.github.io/TrainSchedule/static/js/main.d7911515.chunk.js",
+    "main.js.map": "https://smirnoffnew.github.io/TrainSchedule/static/js/main.d7911515.chunk.js.map",
+    "runtime-main.js": "https://smirnoffnew.github.io/TrainSchedule/static/js/runtime-main.778562ab.js",
+    "runtime-main.js.map": "https://smirnoffnew.github.io/TrainSchedule/static/js/runtime-main.778562ab.js.map",
+    "static/js/2.1089415c.chunk.js": "https://smirnoffnew.github.io/TrainSchedule/static/js/2.1089415c.chunk.js",
+    "static/js/2.1089415c.chunk.js.map": "https://smirnoffnew.github.io/TrainSchedule/static/js/2.1089415c.chunk.js.map",
+    "index.html": "https://smirnoffnew.github.io/TrainSchedule/index.html",
+    "precache-manifest.84ca7411060624f13f8310c7393e860d.js": "https://smirnoffnew.github.io/TrainSchedule/precache-manifest.84ca7411060624f13f8310c7393e860d.js",
+    "service-worker.js": "https://smirnoffnew.github.io/TrainSchedule/service-worker.js",
+    "static/css/main.3c6c27ce.chunk.css.map": "https://smirnoffnew.github.io/TrainSchedule/static/css/main.3c6c27ce.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.989b68e1.js",
+    "static/js/runtime-main.778562ab.js",
     "static/js/2.1089415c.chunk.js",
     "static/css/main.3c6c27ce.chunk.css",
-    "static/js/main.23080f3d.chunk.js"
+    "static/js/main.d7911515.chunk.js"
   ]
 }
