@@ -7,6 +7,7 @@ import TableOutsideLiveLine from '../pages/TableOutsideLiveLine';
 import TableSmallTwo from '../pages/TableSmallTwo';
 import TableSmallThree from '../pages/TableSmallThree';
 import App from '../component/App';
+import NotFound from './NotFound'
 
 const AppRouter = () => {
 
@@ -19,6 +20,8 @@ const AppRouter = () => {
       <Route exact path="/TableOutsideLiveLine" component={TableOutsideLiveLine} />
       <Route exact path="/TableSmallTwo" component={TableSmallTwo} />
       <Route exact path="/TableSmallThree" component={TableSmallThree} />
+
+      <Route component={NotFound} />
     </Switch>
   )
 };

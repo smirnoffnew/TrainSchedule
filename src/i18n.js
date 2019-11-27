@@ -7,6 +7,21 @@ i18n
     // we init with resources
     resources: {
 
+      // Ceshia
+      cs: {
+        translations: {
+          'display.deartures.lineNumber': "Řádek",
+          'display.deartures.finalStation': 'Konečná stanice',
+          'display.deartures.departure': 'Odchod',
+          'display.deartures.connectionStations': 'Připojovací stanice',
+          'display.deartures.platform': 'Plošina',
+          'display.deartures.delay': 'Zpoždění',
+          'display.deartures.freePlaces': 'Volná místa',
+          'display.deartures.occupiedPlaces': 'Obsazená místa',
+          'display.deartures.minutes': 'min',
+        }
+      },
+
       //Slovak 
       sk: {
         translations: {

@@ -20,7 +20,12 @@ class RowSmall extends Component {
       >
         <Fragment>
           <div className="rowItemSmall" style={{ width: '100%' }}>
-            <div className="row-item-textSmall font-size-rem">{destination}</div>
+            <div
+              className="row-item-textSmall font-size-rem"
+              style={{ maxWidth: '75%' }}
+            >
+              {destination}
+            </div>
             <div className="row-item-textSmall font-size-rem">{departureTime}</div>
           </div>
 

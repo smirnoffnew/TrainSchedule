@@ -1,8 +1,6 @@
 export const getRows = (rows, locations, endPaginationRows) => {
   if (locations.length > 0 && rows.length > 0) {
 
-    // console.log('locations', locations)
-
     const newRows = rows.map(item => {
       let firtsStation = item.connectionStations.filter((station) => {
         return station.arrival === null
@@ -43,8 +41,6 @@ export const getRows = (rows, locations, endPaginationRows) => {
         })
       })
 
-      console.log(item)
-
       const normalRow = {};
       normalRow.connectNumber = item.number;
       normalRow.delay = item.delay;
@@ -63,5 +59,9 @@ export const getRows = (rows, locations, endPaginationRows) => {
 
     return newRows.slice(startPaginationRows, endPaginationRows);
   }
+}
+
+export const isNumber = value => {
+  return (value instanceof Number||typeof value === 'number') && !isNaN(value);
 }
 

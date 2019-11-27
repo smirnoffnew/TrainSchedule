@@ -2,7 +2,9 @@ import React, { Component, Fragment } from 'react';
 import { HeadTable } from '../component/headTable/HeadTable'
 import { LiveLine } from '../component/liveLine/LiveLine'
 import Table from '../component/Table/Table';
-import { getRows } from '../functions';
+import { getRows, isNumber } from '../functions';
+import { Redirect } from 'react-router-dom'
+import { withTranslation } from 'react-i18next';
 
 class TableOutsideLiveLine extends Component {
   state = {
@@ -41,12 +43,69 @@ class TableOutsideLiveLine extends Component {
   }
 
   componentDidMount = () => {
+    let params = new URLSearchParams(window.location.search);
+    this.props.i18n.changeLanguage(params.get('lang'));
     this.apiRequestLoop();
-    setInterval(() => this.tick(), 1000 * 30)
+    params.get('refresh') && 
+    setInterval(() => this.tick(), 1000 * params.get('refresh'))
   }
 
   render() {
     const { rows, locations, showLoader } = this.state;
+    let params = new URLSearchParams(window.location.search);
+    if (params.get('page') !== 'TableOutsideLiveLine') {
+      return <Redirect
+        to={`/${params.get('page')}?lang=${params.get('lang')}&refresh=${params.get('refresh')}&page=${params.get('page')}`}
+      />;
+    }
+    if (!params.get('refresh')) {
+      return (
+        <div className='not-found'>
+          Refresh Query Not Found
+        </div>
+      )
+    }
+    if (!isNumber(+params.get('refresh'))) {
+      return (
+        <div className='not-found'>
+          Refresh Query Must Be A Number
+        </div>
+      )
+    }
+    if (!params.get('lang')) {
+      return (
+        <div className='not-found'>
+          Lang Query Not Found
+        </div>
+      )
+    }
+    if (
+      params.get('lang') !== 'cs' &&
+      params.get('lang') !== 'sk' &&
+      params.get('lang') !== 'en' &&
+      params.get('lang') !== 'ua' &&
+      params.get('lang') !== 'de' &&
+      params.get('lang') !== 'pl' &&
+      params.get('lang') !== 'hu' &&
+      params.get('lang') !== 'ru' &&
+      params.get('lang') !== 'fr' &&
+      params.get('lang') !== 'es'
+    ) {
+      return (
+        <div className='not-found'>
+          Lang Query Mismatched
+          <br />
+          Try to write correct lang into query. Here is a list
+          <br />
+          <br />
+          <div className='list'>
+            cs<br />sk<br />en<br />ua<br />de<br />
+            pl<br />hu<br />ru<br />fr<br />es
+          </div>
+        </div>
+      )
+    }
+
     
     return (
       <Fragment>
@@ -66,4 +125,4 @@ class TableOutsideLiveLine extends Component {
   }
 }
 
-export default TableOutsideLiveLine;
+export default withTranslation()(TableOutsideLiveLine);
