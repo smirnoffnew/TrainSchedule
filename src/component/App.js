@@ -10,6 +10,11 @@ class App extends Component {
         to={`/${params.get('page')}?lang=${params.get('lang')}&refresh=${params.get('refresh')}&page=${params.get('page')}`}
       />;
     }
+    else{
+      return <Redirect
+        to={`/TableInside?lang=cs&refresh=5&page=TableInside`}
+      />;
+    }
   }
 }
 
