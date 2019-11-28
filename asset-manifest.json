@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/TrainSchedule/static/css/main.d9a56356.chunk.css",
-    "main.js": "/TrainSchedule/static/js/main.085e6d4d.chunk.js",
-    "main.js.map": "/TrainSchedule/static/js/main.085e6d4d.chunk.js.map",
+    "main.css": "/TrainSchedule/static/css/main.0faa1034.chunk.css",
+    "main.js": "/TrainSchedule/static/js/main.f00c6458.chunk.js",
+    "main.js.map": "/TrainSchedule/static/js/main.f00c6458.chunk.js.map",
     "runtime-main.js": "/TrainSchedule/static/js/runtime-main.989b68e1.js",
     "runtime-main.js.map": "/TrainSchedule/static/js/runtime-main.989b68e1.js.map",
     "static/js/2.c2dd06e8.chunk.js": "/TrainSchedule/static/js/2.c2dd06e8.chunk.js",
     "static/js/2.c2dd06e8.chunk.js.map": "/TrainSchedule/static/js/2.c2dd06e8.chunk.js.map",
     "index.html": "/TrainSchedule/index.html",
-    "precache-manifest.6e17d68f1fed8a4a2dfe941372934c21.js": "/TrainSchedule/precache-manifest.6e17d68f1fed8a4a2dfe941372934c21.js",
+    "precache-manifest.91a9d823b491ad6339dd1500522d301e.js": "/TrainSchedule/precache-manifest.91a9d823b491ad6339dd1500522d301e.js",
     "service-worker.js": "/TrainSchedule/service-worker.js",
-    "static/css/main.d9a56356.chunk.css.map": "/TrainSchedule/static/css/main.d9a56356.chunk.css.map"
+    "static/css/main.0faa1034.chunk.css.map": "/TrainSchedule/static/css/main.0faa1034.chunk.css.map"
   },
   "entrypoints": [
     "static/js/runtime-main.989b68e1.js",
     "static/js/2.c2dd06e8.chunk.js",
-    "static/css/main.d9a56356.chunk.css",
-    "static/js/main.085e6d4d.chunk.js"
+    "static/css/main.0faa1034.chunk.css",
+    "static/js/main.f00c6458.chunk.js"
   ]
 }
