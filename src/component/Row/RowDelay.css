@@ -1,0 +1,60 @@
+.row-delay {
+  width: 100%;
+  background: #2F4858;
+  display: flex;
+  border-bottom: 2px solid #c3ccd2;
+}
+.rowItem-delay {
+  display: flex;
+  padding: 10px;
+  position: relative;
+  align-self: center;
+}
+
+.row-item-text-delay{
+  font-family:"Roboto";
+  font-style: normal;
+  font-weight: normal;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 34px;
+  color: #FFFFFF;
+  max-height: 100px;
+  white-space: pre-line;
+  /* font-weight: bold; */
+}
+
+.train-icon-delay{
+  margin-right: 10px;
+  height: 25px;
+}
+
+.places-delay{
+  color: #FEFEFE !important;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 20px;
+  margin-right: 10px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.green-delay{
+  color: #FEFEFE !important;
+  background: green;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+.red-delay{
+  color: #FEFEFE !important;
+  background: red;
+  border-radius: 25px;
+  padding: 10px;
+  font-size: 20px;
+}
+
+
+
+

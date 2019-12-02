@@ -7,6 +7,7 @@ export const getRows = (rows, locations, endPaginationRows) => {
       });
 
       let endStation = item.connectionStations[item.connectionStations.length - 1].stationId;
+
       let citys = [];
       let stations = [];
 
@@ -47,6 +48,16 @@ export const getRows = (rows, locations, endPaginationRows) => {
       normalRow.freeSeatsCount = item.freeSeatsCount;
       normalRow.destination = name;
       normalRow.departureTime = firtsStation[0].departure.substring(firtsStation[0].departure.indexOf('T') + 1, firtsStation[0].departure.indexOf('T') + 6);
+      normalRow.arrivalTime = item.connectionStations[
+        item.connectionStations.length - 1
+      ].arrival.substring(
+        item.connectionStations[
+          item.connectionStations.length - 1
+        ].arrival.indexOf("T") + 1,
+        item.connectionStations[
+          item.connectionStations.length - 1
+        ].arrival.indexOf("T") + 6
+      );
       normalRow.departure = trowStationsFullNames.join(' ');
       normalRow.platform = firtsStation[0].platform;
       normalRow.stationsTypes = startStation[0].stationsTypes[0];
