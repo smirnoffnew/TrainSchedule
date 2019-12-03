@@ -1,30 +1,25 @@
 import React, { Component } from "react";
 import { withTranslation } from "react-i18next";
 import "./TableDelay.css";
-import RowDelay from "../Row/RowDelay";
+import RowDelayMobile from "../Row/RowDelayMobile";
 
-class TableDelay extends Component {
+class TableDelayMobile extends Component {
   componentDidUpdate = () => {};
 
   render() {
     return (
-      <table className="delay-table">
+      <table className="delay-table delay-table--mobile">
         <thead>
-          <tr className="delay-table__header">
-            <th>{this.props.t("display.deartures.lineNumber")}</th>
-            <th>{this.props.t("display.deartures.finalStation")}</th>
-            <th>{this.props.t("display.deartures.connectionStations")}</th>
-            <th>{this.props.t("display.deartures.departure")}</th>
-            <th>{this.props.t("display.deartures.arrival")}</th>
-            <th>{this.props.t("display.deartures.platform")}</th>
-            <th>{this.props.t("display.deartures.delay")}</th>
-            <th></th>
+          <tr className="delay-table__header delay-table__header--mobile">
+            <th>cíl/spoj</th>
+            <th>příjezd/Odjezd</th>
+            <th>ZPOŽDĚNÍ/Nástupiště</th>
           </tr>
         </thead>
         <tbody>
           {this.props.rows &&
             this.props.rows.map((item, index) => (
-              <RowDelay
+              <RowDelayMobile
                 key={index}
                 theme={this.props.theme}
                 stationsTypes={item.stationsTypes}
@@ -46,5 +41,4 @@ class TableDelay extends Component {
   }
 }
 
-export default withTranslation()(TableDelay);
-                   
+export default withTranslation()(TableDelayMobile);
