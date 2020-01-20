@@ -1,17 +1,18 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 
+//TODO: Final Station, Departure, Connection Stations, Platform, Delay
 i18n.use(initReactI18next).init({
   // we init with resources
   resources: {
     // Ceshia
     cs: {
       translations: {
-        "display.deartures.lineNumber": "Řádek",
+        "display.deartures.lineNumber": "Číslo spoje",
         "display.deartures.finalStation": "Konečná stanice",
-        "display.deartures.departure": "Odchod",
-        "display.deartures.connectionStations": "Připojovací stanice",
-        "display.deartures.platform": "Plošina",
+        "display.deartures.departure": "Odjezd",
+        "display.deartures.connectionStations": "Přes",
+        "display.deartures.platform": "Nástupiště",
         "display.deartures.delay": "Zpoždění",
         "display.deartures.arrival": "Příjezd ",
         "display.deartures.freePlaces": "Volná místa",
@@ -23,12 +24,12 @@ i18n.use(initReactI18next).init({
     //Slovak
     sk: {
       translations: {
-        "display.deartures.lineNumber": "Číslo spoje",
+        "display.deartures.lineNumber": "Číslo spoja",
         "display.deartures.finalStation": "Cilová stanice",
-        "display.deartures.departure": "Odjezd",
+        "display.deartures.departure": "Odchod",
         "display.deartures.connectionStations": "Pripojovacie stanice",
-        "display.deartures.platform": "Plošina",
-        "display.deartures.delay": "Zpoždění",
+        "display.deartures.platform": "Nástupište",
+        "display.deartures.delay": "Meškanie",
         "display.deartures.arrival": "Příjezd ",
         "display.deartures.freePlaces": "Voľné miesta",
         "display.deartures.occupiedPlaces": "Obsadené miesta",
@@ -39,10 +40,10 @@ i18n.use(initReactI18next).init({
     //English
     en: {
       translations: {
-        "display.deartures.lineNumber": "Line",
+        "display.deartures.lineNumber": "Line number",
         "display.deartures.finalStation": "Final Station",
         "display.deartures.departure": "Departure",
-        "display.deartures.connectionStations": "Connection Stations",
+        "display.deartures.connectionStations": "Over",
         "display.deartures.platform": "Platform",
         "display.deartures.delay": "Delay",
         "display.deartures.arrival": "Arrival",
@@ -57,7 +58,7 @@ i18n.use(initReactI18next).init({
       translations: {
         "display.deartures.lineNumber": "Лінія",
         "display.deartures.finalStation": "Кінцева станція",
-        "display.deartures.departure": "Виїзд",
+        "display.deartures.departure": "Відправлення",
         "display.deartures.connectionStations": "Станції підключення",
         "display.deartures.platform": "Платформа",
         "display.deartures.delay": "Затримка",
@@ -71,12 +72,12 @@ i18n.use(initReactI18next).init({
     //German
     de: {
       translations: {
-        "display.deartures.lineNumber": "Linie",
+        "display.deartures.lineNumber": "Zeilennummer",
         "display.deartures.finalStation": "Endstation",
         "display.deartures.departure": "Abfahrt",
         "display.deartures.connectionStations": "Verbindungsstationen",
-        "display.deartures.platform": "Plattform",
-        "display.deartures.delay": "Verzögern",
+        "display.deartures.platform": "Gleis",
+        "display.deartures.delay": "Verspätung",
         "display.deartures.arrival": "Ankunft",
         "display.deartures.freePlaces": "Freie Plätze",
         "display.deartures.occupiedPlaces": "Belegte Plätze",
@@ -87,11 +88,11 @@ i18n.use(initReactI18next).init({
     //Polish
     pl: {
       translations: {
-        "display.deartures.lineNumber": "Numer połączenia",
+        "display.deartures.lineNumber": "Linia",
         "display.deartures.finalStation": "Stacja końcowa",
-        "display.deartures.departure": "Odejście",
+        "display.deartures.departure": "Odjazd",
         "display.deartures.connectionStations": "Stacje połączeń",
-        "display.deartures.platform": "Platforma",
+        "display.deartures.platform": "Peron",
         "display.deartures.delay": "Opóźnienie",
         "display.deartures.arrival": "Przyjazd",
         "display.deartures.freePlaces": "Wolne miejsca",
@@ -103,12 +104,12 @@ i18n.use(initReactI18next).init({
     //Hungarian
     hu: {
       translations: {
-        "display.deartures.lineNumber": "Sor száma",
+        "display.deartures.lineNumber": "Vonal",
         "display.deartures.finalStation": "Utolsó állomás",
         "display.deartures.departure": "Indulás",
         "display.deartures.connectionStations": "Csatlakozási állomások",
-        "display.deartures.platform": "Emelvény",
-        "display.deartures.delay": "Késleltetés",
+        "display.deartures.platform": "Peron",
+        "display.deartures.delay": "Késés",
         "display.deartures.arrival": "Érkezés",
         "display.deartures.freePlaces": "Szabad helyek",
         "display.deartures.occupiedPlaces": "Elfoglalt helyek",
@@ -139,7 +140,7 @@ i18n.use(initReactI18next).init({
         "display.deartures.finalStation": "Station finale",
         "display.deartures.departure": "Départ",
         "display.deartures.connectionStations": "Stations de connexion",
-        "display.deartures.platform": "Plate- forme",
+        "display.deartures.platform": "Plate-forme",
         "display.deartures.delay": "Retard",
         "display.deartures.arrival": "Arrivée",
         "display.deartures.freePlaces": "Places gratuites",
