@@ -7,12 +7,12 @@ class App extends Component {
 
     if (params.get('page')) {
       return <Redirect
-        to={`/${params.get('page')}?lang=${params.get('lang')}&refresh=${params.get('refresh')}&page=${params.get('page')}`}
+        to={`/${params.get('page')}?lang=${params.get('lang')}&refresh=${params.get('refresh')}&page=${params.get('page')}&stationId=${params.get('stationId')}`}
       />;
     }
-    else{
+    else {
       return <Redirect
-        to={`/TableInside?lang=cs&refresh=5&page=TableInside`}
+        to={`/TableInside?lang=cs&refresh=5&page=TableInside&stationId=10204002`}
       />;
     }
   }

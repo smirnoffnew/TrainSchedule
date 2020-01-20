@@ -13,11 +13,11 @@ class TableOutsideLiveLine extends Component {
     showLoader: true,
   }
 
-  apiRequestLoop = () => {
-    const rowsUrlLoop = "https://dpl-qa-ybus-pubapi.sa.cz/restapi/routes/10204002/departures"
+  apiRequestLoop = stationId => {
+    const rowsUrlLoop = stationId => `https://dpl-qa-ybus-pubapi.sa.cz/restapi/routes/${stationId}/departures`
     const locationsUrlLoop = "https://dpl-qa-ybus-pubapi.sa.cz/restapi/consts/locations"
 
-    fetch(rowsUrlLoop, { mode: 'cors' })
+    fetch(rowsUrlLoop(stationId), { mode: 'cors' })
       .then(response => response.json())
       .then(rowsData =>
         fetch(locationsUrlLoop, { mode: 'cors' })
@@ -38,16 +38,16 @@ class TableOutsideLiveLine extends Component {
       })
   }
 
-  tick = () => {
-    this.apiRequestLoop()
+  tick = stationId => {
+    this.apiRequestLoop(stationId)
   }
 
   componentDidMount = () => {
     let params = new URLSearchParams(window.location.search);
     this.props.i18n.changeLanguage(params.get('lang'));
-    this.apiRequestLoop();
+    this.apiRequestLoop(params.get('stationId'));
     params.get('refresh') && 
-    setInterval(() => this.tick(), 1000 * params.get('refresh'))
+    setInterval(() => this.tick(params.get('stationId')), 1000 * params.get('refresh'))
   }
 
   render() {
@@ -55,7 +55,7 @@ class TableOutsideLiveLine extends Component {
     let params = new URLSearchParams(window.location.search);
     if (params.get('page') !== 'TableOutsideLiveLine') {
       return <Redirect
-        to={`/${params.get('page')}?lang=${params.get('lang')}&refresh=${params.get('refresh')}&page=${params.get('page')}`}
+        to={`/${params.get('page')}?lang=${params.get('lang')}&refresh=${params.get('refresh')}&page=${params.get('page')}&stationId=${params.get('stationId')}`}
       />;
     }
     if (!params.get('refresh')) {
@@ -78,6 +78,13 @@ class TableOutsideLiveLine extends Component {
           Lang Query Not Found
         </div>
       )
+    }
+    if (!params.get('stationId')) {
+      return (
+        <div className='not-found'>
+          Station ID Query Not Found
+        </div>
+      )      
     }
     if (
       params.get('lang') !== 'cs' &&

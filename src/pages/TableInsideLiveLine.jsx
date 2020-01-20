@@ -13,11 +13,11 @@ class TableInsideLiveLine extends Component {
     showLoader: true,
   }
 
-  apiRequestLoop = () => {
-    const rowsUrlLoop = "https://dpl-qa-ybus-pubapi.sa.cz/restapi/routes/10204002/departures"
+  apiRequestLoop = stationId => {
+    const rowsUrlLoop = stationId => `https://dpl-qa-ybus-pubapi.sa.cz/restapi/routes/${stationId}/departures`
     const locationsUrlLoop = "https://dpl-qa-ybus-pubapi.sa.cz/restapi/consts/locations"
 
-    fetch(rowsUrlLoop, { mode: 'cors' })
+    fetch(rowsUrlLoop(stationId), { mode: 'cors' })
       .then(response => response.json())
       .then(rowsData =>
         fetch(locationsUrlLoop, { mode: 'cors' })
@@ -38,16 +38,16 @@ class TableInsideLiveLine extends Component {
       })
   }
 
-  tick = () => {
-    this.apiRequestLoop()
+  tick = stationId => {
+    this.apiRequestLoop(stationId)
   }
 
   componentDidMount = () => {
     let params = new URLSearchParams(window.location.search);
     this.props.i18n.changeLanguage(params.get('lang'));
-    this.apiRequestLoop();
+    this.apiRequestLoop(params.get('stationId'));
     params.get('refresh') && 
-    setInterval(() => this.tick(), 1000 * params.get('refresh'))
+    setInterval(() => this.tick(params.get('stationId')), 1000 * params.get('refresh'))
   }
   render() {
     const { rows, locations, showLoader } = this.state;
@@ -77,6 +77,13 @@ class TableInsideLiveLine extends Component {
           Lang Query Not Found
         </div>
       )
+    }
+    if (!params.get('stationId')) {
+      return (
+        <div className='not-found'>
+          Station ID Query Not Found
+        </div>
+      )      
     }
     if (
       params.get('lang') !== 'cs' &&
